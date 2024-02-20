@@ -10,12 +10,12 @@ const DUMMY_POST = {
   content: "# This is the first post",
 };
 
-function PostContent() {
-  const imagePath = `/images/posts/${DUMMY_POST.slug}/${DUMMY_POST.image}`;
+function PostContent({ post }) {
+  const imagePath = `/images/posts/${post.slug}/${post.image}`;
   return (
     <article className={classes.content}>
-      <PostHeader title={DUMMY_POST.title} image={imagePath} />
-      <Markdown>{DUMMY_POST.content}</Markdown>
+      <PostHeader title={post.title} image={imagePath} />
+      <Markdown>{post.content}</Markdown>
     </article>
   );
 }
