@@ -4,8 +4,6 @@ import Image from "next/image";
 function PostItem(props) {
   const { title, image, excerpt, date, slug } = props.post;
 
-  console.log("props:", props);
-
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
