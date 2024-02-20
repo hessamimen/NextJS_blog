@@ -5,7 +5,7 @@ function PostsGrid({ posts }) {
   return (
     <ul className={classes.grid}>
       {posts.map((post) => (
-        <li>{<PostItem />}</li>
+        <PostItem post={post} />
       ))}
     </ul>
   );
